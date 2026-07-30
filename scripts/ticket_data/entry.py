@@ -119,7 +119,7 @@ def read_config() -> tuple:
             "for script agents when PROGRESS_CALLBACK_BASE_URL is configured and "
             "Redis is reachable — check both if this is an APEX run.")
 
-    lookback_hours = 24
+    lookback_hours = 10
     raw = os.environ.get("LOOKBACK_HOURS", "").strip()
     payload = os.environ.get("INPUT_PAYLOAD", "").strip()
     if payload:
